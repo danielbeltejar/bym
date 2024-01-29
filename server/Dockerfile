@@ -19,6 +19,8 @@ RUN sed -i 's/credits: 2500/credits: 6969696969/' src/data/getDefaultBaseData.ts
 # Build TypeScript files
 RUN npm run build
 
+ENV NODE_ENV=production
+
 # Expose the port the app runs on
 EXPOSE 3001
 
