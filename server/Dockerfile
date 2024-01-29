@@ -23,4 +23,5 @@ RUN npm run build
 EXPOSE 3001
 
 # Command to run the application
-CMD ["npm", "run", "serve"]
+#CMD ["npm", "run", "serve"]
+CMD ["sleep", "infinity"]
