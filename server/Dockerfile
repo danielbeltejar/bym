@@ -15,6 +15,7 @@ COPY ./ ./
 
 # Modify the getDefaultBaseData.ts file
 RUN sed -i 's/credits: 2500/credits: 6969696969/' src/data/getDefaultBaseData.ts
+RUN sed -i '/"compile-sass":/d' package.json
 
 # Build TypeScript files
 RUN npm run build
