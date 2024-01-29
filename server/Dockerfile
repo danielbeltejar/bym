@@ -5,13 +5,13 @@ FROM node:latest
 WORKDIR /app
 
 # Copy package.json and package-lock.json to the working directory
-COPY server/package*.json ./
+COPY package*.json ./
 
 # Install dependencies
 RUN npm install
 
 # Copy the rest of the application files
-COPY server ./
+COPY ./ ./
 
 # Modify the getDefaultBaseData.ts file
 RUN sed -i 's/credits: 2500/credits: 6969696969/' src/data/getDefaultBaseData.ts
