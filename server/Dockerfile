@@ -26,4 +26,4 @@ ENV NODE_ENV=production
 EXPOSE 3001
 
 # Command to run the application
-CMD ["npm", "run", "serve"]
+CMD ["npm", "run", "serve", "1>&2"]
