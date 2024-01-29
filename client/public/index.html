@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruffle Player Example</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #container {
+            width: 100%;
+            height: 100%;
+            max-width: 800px; /* Optional: Adjust the max width as needed */
+            max-height: 600px; /* Optional: Adjust the max height as needed */
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+
+    <script>
+        window.RufflePlayer = window.RufflePlayer || {};
+        window.addEventListener("load", (event) => {
+            const ruffle = window.RufflePlayer.newest();
+            const player = ruffle.createPlayer();
+            const container = document.getElementById("container");
+            container.appendChild(player);
+            player.load("assets/swf/latest.swf");
+        });
+    </script>
+    <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+</body>
+</html>
